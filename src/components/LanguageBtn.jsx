@@ -1,4 +1,4 @@
-function LangBtn({ id, activeLangId, lang, setActiveLangId }) {
+function LangBtn({ id, activeLangId, title, setActiveLangId }) {
     // actions
     const handleBtnClick = (e) => {
         const activeId = e.target.id;
@@ -21,7 +21,7 @@ function LangBtn({ id, activeLangId, lang, setActiveLangId }) {
             onClick={handleBtnClick}
             className={`${btnDefault} ${id == activeLangId && btnSelected}`}
         >
-            {lang.title}
+            {title}
         </button>
     );
 }

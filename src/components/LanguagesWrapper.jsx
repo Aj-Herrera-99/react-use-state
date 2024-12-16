@@ -15,7 +15,7 @@ function LanguagesWrapper({ langs }) {
                     <LangBtn
                         key={lang.id}
                         id={lang.id}
-                        lang={lang}
+                        title={lang.title}
                         activeLangId={activeLangId}
                         setActiveLangId={setActiveLangId}
                     ></LangBtn>
