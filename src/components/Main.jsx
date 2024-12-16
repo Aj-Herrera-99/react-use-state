@@ -2,7 +2,7 @@ import LanguagesWrapper from "./LanguagesWrapper";
 
 function Main({ langs }) {
     return (
-        <main className="p-16 bg-green-300 ">
+        <main className="py-16">
             <LanguagesWrapper langs={langs}></LanguagesWrapper>
         </main>
     );
