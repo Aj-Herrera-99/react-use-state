@@ -1,18 +1,19 @@
-function LangBtn({ id, lang, setActiveLangId }) {
-
+function LangBtn({ id, activeLangId, lang, setActiveLangId }) {
+    // actions
     const handleBtnClick = (e) => {
-        console.log(e.target);
-        const id = e.target.id;
-        
-        console.log(id);
-        setActiveLangId(id);
-    }       
+        const activeId = e.target.id;
+        setActiveLangId(activeId);
+    };
+
+    // classes
+    const btnDefault = "px-4 py-2 text-white bg-blue-600 rounded-md";
+    const btnSelected = "bg-yellow-600 text-black";
 
     return (
         <button
             id={id}
             onClick={handleBtnClick}
-            className="px-4 py-2 text-white bg-blue-600 rounded-md"
+            className={`${btnDefault} ${id==activeLangId && btnSelected}`}
         >
             {lang.title}
         </button>
