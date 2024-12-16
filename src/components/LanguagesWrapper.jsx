@@ -8,8 +8,8 @@ function LanguagesWrapper({ langs }) {
     const activeLang = langs.find((lang) => lang.id == activeLangId);
 
     return (
-        <div className="flex flex-col gap-10 max-w-[700px] mx-auto">
-            <div className="flex gap-4">
+        <section className="flex flex-col gap-10 max-w-[700px] mx-auto">
+            <nav className="flex gap-4">
                 {/* Language */}
                 {langs.map((lang) => (
                     <LangBtn
@@ -20,10 +20,10 @@ function LanguagesWrapper({ langs }) {
                         setActiveLangId={setActiveLangId}
                     ></LangBtn>
                 ))}
-            </div>
+            </nav>
             {/* Description */}
             <LangDescription activeLang={activeLang}></LangDescription>
-        </div>
+        </section>
     );
 }
 
