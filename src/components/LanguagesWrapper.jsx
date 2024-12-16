@@ -3,7 +3,7 @@ import LangBtn from "./LanguageBtn";
 import LangDescription from "./LanguageDescription";
 
 function LanguagesWrapper({ langs }) {
-    const [activeLangId, setActiveLangId] = useState(1);
+    const [activeLangId, setActiveLangId] = useState(-1);
 
     const activeLang = langs.find((lang) => lang.id == activeLangId);
 
